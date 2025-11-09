@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Photo Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="brand">
+                <div class="logo" aria-hidden="true"></div>
+                <h1>Interactive Photo Gallery</h1>
+            </div>
+            <main class="main">
+                <section class="grid gallery" id="gallery">
+
+                    <article class="card">
+                        <a class="thumb">
+                            <img src="bmw.jpg" alt="BMW M3" data-tags="nature,night,aurora">
+                        </a>
+                        <div class="meta">
+                            <span>BMW M3</span>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <a class="thumb">
+                            <img src="amg.jpg" alt="AMG GT" data-tags="desert,sunset,sand">
+                        </a>
+                        <div class="meta">
+                            <span>AMG GT</span>
+                            ]
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <a class="thumb">
+                            <img src="mclaren.jpg" alt="MCLAREN 720S" data-tags="forest,water,green">
+                        </a>
+                        <div class="meta">
+                            <span>MCLAREN 720S</span>
+
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <a class="thumb">
+                            <img src="lambo.jpg" alt="LAMBORGHINI HURACAN" data-tags="city,lights,night">
+                        </a>
+                        <div class="meta">
+                            <span>LAMBORGHINI HURACAN</span>
+
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <a class="thumb">
+                            <img src="dodge.jpg" alt="DODGE CHALLENGER" data-tags="beach,ocean,sunrise">
+                        </a>
+                        <div class="meta">
+                            <span>CHALLENGER</span>
+                        </div>
+                    </article>
+
+                </section>
+            </main>
+
+
+            <div id="lightbox" class="lightbox" aria-modal="true" role="dialog">
+                <div class="viewer">
+                    <div class="nav">
+                        <button type="button" aria-label="Previous (←)" onclick="(window.prev&&prev())">◀</button>
+                        <button type="button" aria-label="Next (→)" onclick="(window.next&&next())">▶</button>
+                        <button type="button" class="close" aria-label="Close (Esc)">✕</button>
+                    </div>
+                    <img id="lightbox-img" alt="">
+                    <footer>
+                        <div id="caption"></div>
+                        <div><span class="kbd">←</span> <span class="kbd">→</span> <span class="kbd">Esc</span></div>
+                    </footer>
+                </div>
+            </div>
+
+            <script src="script.js"></script>
+</body>
+
+</html>
